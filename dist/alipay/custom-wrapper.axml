@@ -1,0 +1,4 @@
+<import src="./base.axml" />
+  <block a:for="{{i.cn}}" a:key="sid">
+    <template is="tmpl_0_container" data="{{i:item}}" />
+  </block>

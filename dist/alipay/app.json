@@ -1,0 +1,21 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/login/index"
+  ],
+  "subpackages": [
+    {
+      "root": "subpackages/manage",
+      "pages": [
+        "test-page/index"
+      ]
+    }
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarTextStyle": "black",
+    "titleBarColor": "#fff",
+    "defaultTitle": "WeChat"
+  },
+  "subPackageBuildType": "independent"
+}

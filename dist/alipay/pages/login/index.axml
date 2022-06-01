@@ -1,0 +1,182 @@
+
+<template is="taro_tmpl" data="{{root:root}}" />
+<import-sjs name="xs" from="../../utils.sjs" />
+<template name="taro_tmpl">
+  <block a:for="{{root.cn}}" a:key="sid">
+    <template is="tmpl_0_container" data="{{i:item}}" />
+  </block>
+</template>
+
+<template name="tmpl_0_catch-view">
+  <view hover-class="{{xs.b(i.hoverClass,'none')}}" hover-stop-propagation="{{xs.b(i.hoverStopPropagation,false)}}" hover-start-time="{{xs.b(i.hoverStartTime,50)}}" hover-stay-time="{{xs.b(i.hoverStayTime,400)}}" onTouchStart="eh" onTouchEnd="eh" onTouchCancel="eh" onLongTap="eh" animation="{{i.animation}}" onAnimationStart="eh" onAnimationIteration="eh" onAnimationEnd="eh" onTransitionEnd="eh" disable-scroll="{{xs.b(i.disableScroll,false)}}" hidden="{{xs.b(i.hidden,false)}}" onAppear="eh" onDisappear="eh" onFirstAppear="eh" style="{{i.st}}" class="{{i.cl}}" onTap="eh" catchTouchMove="eh"  id="{{i.uid||i.sid}}" data-sid="{{i.sid}}">
+    <block a:for="{{i.cn}}" a:key="sid">
+      <template is="{{xs.e(0)}}" data="{{i:item}}" />
+    </block>
+  </view>
+</template>
+
+<template name="tmpl_0_static-view">
+  <view hover-class="{{xs.b(i.hoverClass,'none')}}" hover-stop-propagation="{{xs.b(i.hoverStopPropagation,false)}}" hover-start-time="{{xs.b(i.hoverStartTime,50)}}" hover-stay-time="{{xs.b(i.hoverStayTime,400)}}" animation="{{i.animation}}" disable-scroll="{{xs.b(i.disableScroll,false)}}" hidden="{{xs.b(i.hidden,false)}}" style="{{i.st}}" class="{{i.cl}}"  id="{{i.uid||i.sid}}" data-sid="{{i.sid}}">
+    <block a:for="{{i.cn}}" a:key="sid">
+      <template is="{{xs.e(0)}}" data="{{i:item}}" />
+    </block>
+  </view>
+</template>
+
+<template name="tmpl_0_pure-view">
+  <view style="{{i.st}}" class="{{i.cl}}"  id="{{i.uid||i.sid}}" data-sid="{{i.sid}}">
+    <block a:for="{{i.cn}}" a:key="sid">
+      <template is="{{xs.e(0)}}" data="{{i:item}}" />
+    </block>
+  </view>
+</template>
+
+<template name="tmpl_0_view">
+  <view hover-class="{{xs.b(i.hoverClass,'none')}}" hover-stop-propagation="{{xs.b(i.hoverStopPropagation,false)}}" hover-start-time="{{xs.b(i.hoverStartTime,50)}}" hover-stay-time="{{xs.b(i.hoverStayTime,400)}}" onTouchStart="eh" onTouchMove="eh" onTouchEnd="eh" onTouchCancel="eh" onLongTap="eh" animation="{{i.animation}}" onAnimationStart="eh" onAnimationIteration="eh" onAnimationEnd="eh" onTransitionEnd="eh" disable-scroll="{{xs.b(i.disableScroll,false)}}" hidden="{{xs.b(i.hidden,false)}}" onAppear="eh" onDisappear="eh" onFirstAppear="eh" style="{{i.st}}" class="{{i.cl}}" onTap="eh"  id="{{i.uid||i.sid}}" data-sid="{{i.sid}}">
+    <block a:for="{{i.cn}}" a:key="sid">
+      <template is="{{xs.e(0)}}" data="{{i:item}}" />
+    </block>
+  </view>
+</template>
+
+<template name="tmpl_0_static-text">
+  <text selectable="{{xs.b(i.selectable,false)}}" space="{{i.space}}" decode="{{xs.b(i.decode,false)}}" number-of-lines="{{i.numberOfLines}}" style="{{i.st}}" class="{{i.cl}}"  id="{{i.uid||i.sid}}" data-sid="{{i.sid}}">
+    <block a:for="{{i.cn}}" a:key="sid">
+      <template is="{{xs.e(0)}}" data="{{i:item}}" />
+    </block>
+  </text>
+</template>
+
+<template name="tmpl_0_text">
+  <text selectable="{{xs.b(i.selectable,false)}}" space="{{i.space}}" decode="{{xs.b(i.decode,false)}}" number-of-lines="{{i.numberOfLines}}" style="{{i.st}}" class="{{i.cl}}" onTap="eh" onTouchMove="eh" onTouchEnd="eh" onTouchCancel="eh" onLongTap="eh"  id="{{i.uid||i.sid}}" data-sid="{{i.sid}}">
+    <block a:for="{{i.cn}}" a:key="sid">
+      <template is="{{xs.e(0)}}" data="{{i:item}}" />
+    </block>
+  </text>
+</template>
+
+<template name="tmpl_0_button">
+  <button size="{{xs.b(i.size,'default')}}" type="{{i.type}}" plain="{{xs.b(i.plain,false)}}" disabled="{{i.disabled}}" loading="{{xs.b(i.loading,false)}}" form-type="{{i.formType}}" open-type="{{i.openType}}" hover-class="{{xs.b(i.hoverClass,'button-hover')}}" hover-stop-propagation="{{xs.b(i.hoverStopPropagation,false)}}" hover-start-time="{{xs.b(i.hoverStartTime,20)}}" hover-stay-time="{{xs.b(i.hoverStayTime,70)}}" name="{{i.name}}" onTouchStart="eh" onTouchMove="eh" onTouchEnd="eh" onTouchCancel="eh" onLongTap="eh" scope="{{i.scope}}" public-id="{{i.publicId}}" onGetAuthorize="eh" onError="eh" style="{{i.st}}" class="{{i.cl}}" onTap="eh"  id="{{i.uid||i.sid}}" data-sid="{{i.sid}}">
+    <block a:for="{{i.cn}}" a:key="sid">
+      <template is="{{xs.e(0)}}" data="{{i:item}}" />
+    </block>
+  </button>
+</template>
+
+<template name="tmpl_0_form">
+  <form report-submit="{{xs.b(i.reportSubmit,false)}}" onSubmit="eh" onReset="eh" name="{{i.name}}" style="{{i.st}}" class="{{i.cl}}" onTap="eh" onTouchMove="eh" onTouchEnd="eh" onTouchCancel="eh" onLongTap="eh"  id="{{i.uid||i.sid}}" data-sid="{{i.sid}}">
+    <block a:for="{{i.cn}}" a:key="sid">
+      <template is="{{xs.e(0)}}" data="{{i:item}}" />
+    </block>
+  </form>
+</template>
+
+<template name="tmpl_0_input">
+  <template is="{{xs.c(i, 'tmpl_0_')}}" data="{{i:i}}" />
+</template>
+
+<template name="tmpl_0_input_focus">
+  <input value="{{i.value}}" type="{{xs.b(i.type,'')}}" password="{{xs.b(i.password,false)}}" placeholder="{{i.placeholder}}" placeholder-style="{{i.placeholderStyle}}" placeholder-class="{{xs.b(i.placeholderClass,'input-placeholder')}}" disabled="{{i.disabled}}" maxlength="{{xs.b(i.maxlength,140)}}" cursor-spacing="{{xs.b(i.cursorSpacing,0)}}" focus="{{xs.b(i.focus,false)}}" confirm-type="{{xs.b(i.confirmType,'done')}}" confirm-hold="{{xs.b(i.confirmHold,false)}}" cursor="{{xs.b(i.cursor,i.value.length)}}" selection-start="{{xs.b(i.selectionStart,-1)}}" selection-end="{{xs.b(i.selectionEnd,-1)}}" onInput="eh" onFocus="eh" onBlur="eh" onConfirm="eh" name="{{i.name}}" random-number="{{xs.b(i.randomNumber,false)}}" controlled="{{xs.b(i.controlled,false)}}" enableNative="{{xs.b(i.enableNative,false)}}" style="{{i.st}}" class="{{i.cl}}" onTap="eh" onTouchMove="eh" onTouchEnd="eh" onTouchCancel="eh" onLongTap="eh"  id="{{i.uid||i.sid}}" data-sid="{{i.sid}}"></input>
+</template>
+
+<template name="tmpl_0_input_blur">
+  <input value="{{i.value}}" type="{{xs.b(i.type,'')}}" password="{{xs.b(i.password,false)}}" placeholder="{{i.placeholder}}" placeholder-style="{{i.placeholderStyle}}" placeholder-class="{{xs.b(i.placeholderClass,'input-placeholder')}}" disabled="{{i.disabled}}" maxlength="{{xs.b(i.maxlength,140)}}" cursor-spacing="{{xs.b(i.cursorSpacing,0)}}" confirm-type="{{xs.b(i.confirmType,'done')}}" confirm-hold="{{xs.b(i.confirmHold,false)}}" cursor="{{xs.b(i.cursor,i.value.length)}}" selection-start="{{xs.b(i.selectionStart,-1)}}" selection-end="{{xs.b(i.selectionEnd,-1)}}" onInput="eh" onFocus="eh" onBlur="eh" onConfirm="eh" name="{{i.name}}" random-number="{{xs.b(i.randomNumber,false)}}" controlled="{{xs.b(i.controlled,false)}}" enableNative="{{xs.b(i.enableNative,false)}}" style="{{i.st}}" class="{{i.cl}}" onTap="eh" onTouchMove="eh" onTouchEnd="eh" onTouchCancel="eh" onLongTap="eh"  id="{{i.uid||i.sid}}" data-sid="{{i.sid}}"></input>
+</template>
+
+<template name="tmpl_0_label">
+  <label for="{{i.for}}" name="{{i.name}}" style="{{i.st}}" class="{{i.cl}}" onTap="eh" onTouchMove="eh" onTouchEnd="eh" onTouchCancel="eh" onLongTap="eh"  id="{{i.uid||i.sid}}" data-sid="{{i.sid}}">
+    <block a:for="{{i.cn}}" a:key="sid">
+      <template is="{{xs.e(0)}}" data="{{i:item}}" />
+    </block>
+  </label>
+</template>
+
+<template name="tmpl_0_picker">
+  <picker mode="{{xs.b(i.mode,'selector')}}" disabled="{{i.disabled}}" range="{{i.range}}" range-key="{{i.rangeKey}}" value="{{i.value}}" start="{{i.start}}" end="{{i.end}}" fields="{{xs.b(i.fields,'day')}}" custom-item="{{i.customItem}}" name="{{i.name}}" onCancel="eh" onChange="eh" onColumnChange="eh" style="{{i.st}}" class="{{i.cl}}" onTap="eh" onTouchMove="eh" onTouchEnd="eh" onTouchCancel="eh" onLongTap="eh"  id="{{i.uid||i.sid}}" data-sid="{{i.sid}}">
+  <view>
+    <block a:for="{{i.cn}}" a:key="sid">
+      <template is="{{xs.e(0)}}" data="{{i:item}}" />
+    </block>
+  </view>
+  </picker>
+</template>
+
+<template name="tmpl_0_slider">
+  <slider min="{{xs.b(i.min,0)}}" max="{{xs.b(i.max,100)}}" step="{{xs.b(i.step,1)}}" disabled="{{i.disabled}}" value="{{xs.b(i.value,0)}}" activeColor="{{xs.b(i.activeColor,'#1aad19')}}" backgroundColor="{{xs.b(i.backgroundColor,'#e9e9e9')}}" show-value="{{xs.b(i.showValue,false)}}" onChange="eh" onChanging="eh" name="{{i.name}}" track-size="{{xs.b(i.trackSize,4)}}" handle-size="{{xs.b(i.handleSize,22)}}" handle-color="{{xs.b(i.handleColor,'#ffffff')}}" style="{{i.st}}" class="{{i.cl}}" onTap="eh" onTouchMove="eh" onTouchEnd="eh" onTouchCancel="eh" onLongTap="eh"  id="{{i.uid||i.sid}}" data-sid="{{i.sid}}"></slider>
+</template>
+
+<template name="tmpl_0_switch">
+  <switch checked="{{xs.b(i.checked,false)}}" disabled="{{i.disabled}}" type="{{xs.b(i.type,'switch')}}" color="{{xs.b(i.color,'#04BE02')}}" onChange="eh" name="{{i.name}}" controlled="{{xs.b(i.controlled,false)}}" style="{{i.st}}" class="{{i.cl}}" onTap="eh" onTouchMove="eh" onTouchEnd="eh" onTouchCancel="eh" onLongTap="eh"  id="{{i.uid||i.sid}}" data-sid="{{i.sid}}"></switch>
+</template>
+
+<template name="tmpl_0_textarea">
+  <template is="{{xs.c(i, 'tmpl_0_')}}" data="{{i:i}}" />
+</template>
+
+<template name="tmpl_0_textarea_focus">
+  <textarea value="{{i.value}}" placeholder="{{i.placeholder}}" placeholder-style="{{i.placeholderStyle}}" placeholder-class="{{xs.b(i.placeholderClass,'textarea-placeholder')}}" disabled="{{i.disabled}}" maxlength="{{xs.b(i.maxlength,140)}}" auto-focus="{{xs.b(i.autoFocus,false)}}" focus="{{xs.b(i.focus,false)}}" auto-height="{{xs.b(i.autoHeight,false)}}" fixed="{{xs.b(i.fixed,false)}}" cursor-spacing="{{xs.b(i.cursorSpacing,0)}}" cursor="{{xs.b(i.cursor,-1)}}" selection-start="{{xs.b(i.selectionStart,-1)}}" selection-end="{{xs.b(i.selectionEnd,-1)}}" onFocus="eh" onBlur="eh" onLineChange="eh" onInput="eh" onConfirm="eh" name="{{i.name}}" show-count="{{xs.b(i.showCount,true)}}" controlled="{{xs.b(i.controlled,false)}}" enableNative="{{xs.b(i.enableNative,false)}}" style="{{i.st}}" class="{{i.cl}}" onTap="eh" onTouchMove="eh" onTouchEnd="eh" onTouchCancel="eh" onLongTap="eh"  id="{{i.uid||i.sid}}" data-sid="{{i.sid}}"></textarea>
+</template>
+
+<template name="tmpl_0_textarea_blur">
+  <textarea value="{{i.value}}" placeholder="{{i.placeholder}}" placeholder-style="{{i.placeholderStyle}}" placeholder-class="{{xs.b(i.placeholderClass,'textarea-placeholder')}}" disabled="{{i.disabled}}" maxlength="{{xs.b(i.maxlength,140)}}" auto-focus="{{xs.b(i.autoFocus,false)}}" auto-height="{{xs.b(i.autoHeight,false)}}" fixed="{{xs.b(i.fixed,false)}}" cursor-spacing="{{xs.b(i.cursorSpacing,0)}}" cursor="{{xs.b(i.cursor,-1)}}" selection-start="{{xs.b(i.selectionStart,-1)}}" selection-end="{{xs.b(i.selectionEnd,-1)}}" onFocus="eh" onBlur="eh" onLineChange="eh" onInput="eh" onConfirm="eh" name="{{i.name}}" show-count="{{xs.b(i.showCount,true)}}" controlled="{{xs.b(i.controlled,false)}}" enableNative="{{xs.b(i.enableNative,false)}}" style="{{i.st}}" class="{{i.cl}}" onTap="eh" onTouchMove="eh" onTouchEnd="eh" onTouchCancel="eh" onLongTap="eh"  id="{{i.uid||i.sid}}" data-sid="{{i.sid}}"></textarea>
+</template>
+
+<template name="tmpl_0_movable-area">
+  <movable-area scale-area="{{xs.b(i.scaleArea,false)}}" style="{{i.st}}" class="{{i.cl}}" onTap="eh" onTouchMove="eh" onTouchEnd="eh" onTouchCancel="eh" onLongTap="eh"  id="{{i.uid||i.sid}}" data-sid="{{i.sid}}">
+    <block a:for="{{i.cn}}" a:key="sid">
+      <template is="{{xs.e(0)}}" data="{{i:item}}" />
+    </block>
+  </movable-area>
+</template>
+
+<template name="tmpl_0_movable-view">
+  <movable-view direction="{{xs.b(i.direction,none)}}" inertia="{{xs.b(i.inertia,false)}}" out-of-bounds="{{xs.b(i.outOfBounds,false)}}" x="{{i.x}}" y="{{i.y}}" damping="{{xs.b(i.damping,20)}}" friction="{{xs.b(i.friction,2)}}" disabled="{{i.disabled}}" scale="{{xs.b(i.scale,false)}}" scale-min="{{xs.b(i.scaleMin,0.5)}}" scale-max="{{xs.b(i.scaleMax,10)}}" scale-value="{{xs.b(i.scaleValue,1)}}" onChange="eh" onScale="eh" onHTouchMove="eh" onVTouchMove="eh" width="{{xs.b(i.width,'10px')}}" height="{{xs.b(i.height,'10px')}}" onTouchStart="eh" onTouchMove="eh" onTouchEnd="eh" onTouchCancel="eh" onLongTap="eh" animation="{{i.animation}}" onAnimationStart="eh" onAnimationIteration="eh" onAnimationEnd="eh" onTransitionEnd="eh" onChangeEnd="eh" style="{{i.st}}" class="{{i.cl}}" onTap="eh"  id="{{i.uid||i.sid}}" data-sid="{{i.sid}}">
+    <block a:for="{{i.cn}}" a:key="sid">
+      <template is="{{xs.e(0)}}" data="{{i:item}}" />
+    </block>
+  </movable-view>
+</template>
+
+<template name="tmpl_0_scroll-view">
+  <scroll-view scroll-x="{{xs.b(i.scrollX,false)}}" scroll-y="{{xs.b(i.scrollY,false)}}" upper-threshold="{{xs.b(i.upperThreshold,50)}}" lower-threshold="{{xs.b(i.lowerThreshold,50)}}" scroll-top="{{i.scrollTop}}" scroll-left="{{i.scrollLeft}}" scroll-into-view="{{i.scrollIntoView}}" scroll-with-animation="{{xs.b(i.scrollWithAnimation,false)}}" enable-back-to-top="{{xs.b(i.enableBackToTop,false)}}" onScrollToUpper="eh" onScrollToLower="eh" onScroll="eh" onTouchStart="eh" onTouchMove="eh" onTouchEnd="eh" onTouchCancel="eh" onLongTap="eh" animation="{{i.animation}}" onAnimationStart="eh" onAnimationIteration="eh" onAnimationEnd="eh" onTransitionEnd="eh" scroll-animation-duration="{{i.scrollAnimationDuration}}" trap-scroll="{{xs.b(i.trapScroll,false)}}" style="{{i.st}}" class="{{i.cl}}" onTap="eh"  id="{{i.uid||i.sid}}" data-sid="{{i.sid}}">
+    <block a:for="{{i.cn}}" a:key="sid">
+      <template is="{{xs.e(0)}}" data="{{i:item}}" />
+    </block>
+  </scroll-view>
+</template>
+
+<template name="tmpl_0_swiper">
+  <swiper indicator-dots="{{xs.b(i.indicatorDots,false)}}" indicator-color="{{xs.b(i.indicatorColor,'rgba(0, 0, 0, .3)')}}" indicator-active-color="{{xs.b(i.indicatorActiveColor,'#000000')}}" autoplay="{{xs.b(i.autoplay,false)}}" current="{{xs.b(i.current,0)}}" interval="{{xs.b(i.interval,5000)}}" duration="{{xs.b(i.duration,500)}}" circular="{{xs.b(i.circular,false)}}" vertical="{{xs.b(i.vertical,false)}}" previous-margin="{{xs.b(i.previousMargin,'0px')}}" next-margin="{{xs.b(i.nextMargin,'0px')}}" display-multiple-items="{{xs.b(i.displayMultipleItems,1)}}" onChange="eh" onTransition="eh" onTouchStart="eh" onTouchMove="eh" onTouchEnd="eh" onTouchCancel="eh" onLongTap="eh" active-class="{{i.activeClass}}" changing-class="{{i.changingClass}}" acceleration="{{xs.b(i.acceleration,false)}}" disable-programmatic-animation="{{xs.b(i.disableProgrammaticAnimation,false)}}" disable-touch="{{xs.b(i.disableTouch,false)}}" onAnimationEnd="eh" style="{{i.st}}" class="{{i.cl}}" onTap="eh"  id="{{i.uid||i.sid}}" data-sid="{{i.sid}}">
+    <block a:for="{{xs.f(i.cn)}}" a:key="sid">
+      <swiper-item class="{{item.cl}}" style="{{item.st}}" id="{{item.uid||item.sid}}" data-sid="{{item.sid}}">
+        <block a:for="{{item.cn}}" a:key="sid">
+          <template is="{{xs.e(0)}}" data="{{i:item}}" />
+        </block>
+      </swiper-item>
+    </block>
+  </swiper>
+</template>
+
+<template name="tmpl_0_static-image">
+  <image src="{{i.src}}" mode="{{xs.b(i.mode,'scaleToFill')}}" lazy-load="{{xs.b(i.lazyLoad,false)}}" default-source="{{i.defaultSource}}" style="{{i.st}}" class="{{i.cl}}"  id="{{i.uid||i.sid}}" data-sid="{{i.sid}}">
+    <block a:for="{{i.cn}}" a:key="sid">
+      <template is="{{xs.e(0)}}" data="{{i:item}}" />
+    </block>
+  </image>
+</template>
+
+<template name="tmpl_0_image">
+  <image src="{{i.src}}" mode="{{xs.b(i.mode,'scaleToFill')}}" lazy-load="{{xs.b(i.lazyLoad,false)}}" onError="eh" onLoad="eh" onTouchStart="eh" onTouchMove="eh" onTouchEnd="eh" onTouchCancel="eh" onLongTap="eh" default-source="{{i.defaultSource}}" style="{{i.st}}" class="{{i.cl}}" onTap="eh"  id="{{i.uid||i.sid}}" data-sid="{{i.sid}}">
+    <block a:for="{{i.cn}}" a:key="sid">
+      <template is="{{xs.e(0)}}" data="{{i:item}}" />
+    </block>
+  </image>
+</template>
+
+<template name="tmpl_0_#text">
+  <block>{{i.v}}</block>
+</template>
+
+<template name="tmpl_0_container">
+  <template is="{{xs.a(0, i.nn)}}" data="{{i:i}}" />
+</template>

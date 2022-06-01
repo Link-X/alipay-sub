@@ -1,0 +1,8 @@
+{
+  "miniprogramRoot": "./",
+  "compileType": "mini",
+  "appid": "2021003130680772",
+  "app_id": "2021003130680772",
+  "component2": false,
+  "enableAppxNg": false
+}
